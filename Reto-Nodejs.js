@@ -26,5 +26,5 @@ mongoose.connect('mongodb+srv://HenryJulian:Henryco060889@universidad.wsxxoep.mo
 //Se pone al servidor en modo escucha, se ejecuta el servidor
 const puerto = 3000;
 app.listen ( puerto, () => {
-    console.log(`El servidor está Online en el puerto - y está funcionando con NODEMON ${puerto}`);
+    console.log(`El servidor está Online en el puerto ${puerto} y está funcionando con NODEMON`);
 } );

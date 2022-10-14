@@ -9,6 +9,8 @@
   },
   "author": "Henry Julian",
   "license": "ISC",
-  
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5"
   }
 }
