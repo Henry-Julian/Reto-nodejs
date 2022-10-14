@@ -5,7 +5,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 
-
 //Se llama al constructor de express
 const app = express();
 
@@ -27,5 +26,5 @@ mongoose.connect('mongodb+srv://Root:Admin123@cluster-ejemplogr27.5zutnur.mongod
 //Se pone al servidor en modo escucha, se ejecuta el servidor
 const puerto = 3000;
 app.listen ( puerto, () => {
-    console.log(`El servidor está online en el puerto - y está funcionando con NODEMON ${puerto}`);
+    console.log(`El servidor está Online en el puerto - y está funcionando con NODEMON ${puerto}`);
 } );
