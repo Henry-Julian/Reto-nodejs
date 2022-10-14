@@ -19,7 +19,7 @@ app.use('/Reto-Nodejs/api', require('./router/rutas'));
 
 
 //Se configura la cadena de conexión a la BD que está en MongoDB
-mongoose.connect('mongodb+srv://Root:Admin123@cluster-ejemplogr27.5zutnur.mongodb.net/Ejemplo27')
+mongoose.connect('mongodb+srv://HenryJulian:Henryco060889@universidad.wsxxoep.mongodb.net/Universidad')
     .then(db => console.log('Conexión Exitosa'))
     .catch( err => console.log('Error al conectar con la Base de Datos: ', err))
 
