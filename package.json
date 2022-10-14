@@ -1,0 +1,16 @@
+{
+  "name": "reto-nodejs",
+  "version": "1.0.0",
+  "description": "Generación de API Rest para el Reto de NodeJs y Mongo DB",
+  "main": "Reto-Nodejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Reto-Nodejs"
+  },
+  "author": "Ximena Parra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5"
+  }
+}
