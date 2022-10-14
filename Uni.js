@@ -1,15 +1,15 @@
-//importar mongoose
+//Se importa mongoose
 const mongoose = require('mongoose');
 
-let IcfesSchema = new mongoose.Schema({
+let UniSchema = new mongoose.Schema({
     idIcfes: Number,
     tipoDoc: String,
     docIdent: Number,
     nombres: String,
     apellidos: String,
-    direccion: String,
+    dirección: String,
     email: String,
-    telefono: Number,
+    teléfono: Number,
     celular: Number,
     linkconsg: String,
     codIcfes: Number,
@@ -18,4 +18,4 @@ let IcfesSchema = new mongoose.Schema({
     colegiogrado: String,
 });
 
-module.exports = mongoose.model('icfes', IcfesSchema, 'Pruebas');
+module.exports = mongoose.model('icfes', UniSchema, 'Pruebas');
