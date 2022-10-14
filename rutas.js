@@ -105,10 +105,10 @@ router.post('/uni', (req, res) => {
     )
 });
 
-     //eliminar
-     router.post("/uni-eliminar/:id", (req, res)=> {
-     let params = req.params;
-     UniSchema.deleteOne({ 'idIcfes': params.id}, {
+     //Proceso para eliminar
+      router.post("/uni-eliminar/:id", (req, res)=> {
+      let params = req.params;
+      UniSchema.deleteOne({ 'idIcfes': params.id}, {
         $set: req.body
     },
      function(error, info) {
