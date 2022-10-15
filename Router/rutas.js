@@ -46,23 +46,23 @@ router.post('/uni', (req, res) => {
 });
 
      //Proceso para actualizar
-     router.post('/uni-actualizar', (req, res) => {
+     router.put('/uni-actualizar/:id', (req, res) => {
      let body = req.body;
      UniSchema.updateOne({'idIcfes': body.id}, {
         $set: {
-            tipoDoc: body.tipodoc,
-            docIdent: body.documento,
-            nombres: body.nombre,
-            apellidos: body.apellido,
-            dirección: body.dirección,
-            email: body.email,
-            teléfono: body.teléfono,
-            celular: body.celular,
-            linkconsg: body.link,
-            codIcfes: body.codicfes,
-            familiar: body.familiar,
-            estrato: body.estrato,
-            colegiogrado: body.colegio, 
+            tipoDoc: req.body.tipodoc,
+            docIdent: req.body.documento,
+            nombres: req.body.nombre,
+            apellidos: req.body.apellido,
+            dirección: req.body.dirección,
+            email: req.body.email,
+            teléfono: req.body.teléfono,
+            celular: req.body.celular,
+            linkconsg: req.body.link,
+            codIcfes: req.body.codicfes,
+            familiar: req.body.familiar,
+            estrato: req.body.estrato,
+            colegiogrado: req.body.colegio, 
         }
     },
       function(error, info){
@@ -70,7 +70,7 @@ router.post('/uni', (req, res) => {
             res.json({
                 resultado: false,
                 msg: 'No se pudieron modificar los datos',
-                err
+                error
             });
          } else {
             res.json({
@@ -83,7 +83,7 @@ router.post('/uni', (req, res) => {
 });
 
       //Proceso para actualizar con PUT
-        router.put('/uni-actualizar', (req, res) => {
+        router.put('/uni-actualizar/:id', (req, res) => {
         let body = req.body;
         UniSchema.updateOne({'idIcfes': body.id}, {
         $set: req.body
@@ -93,7 +93,7 @@ router.post('/uni', (req, res) => {
               res.json ({
                 resultado: false,
                 msg: 'No se pudieron modificar los datos',
-                err
+                error
             });
         } else {
             res.json({
@@ -106,7 +106,7 @@ router.post('/uni', (req, res) => {
 });
 
      //Proceso para eliminar
-      router.post("/uni-eliminar/:id", (req, res)=> {
+      router.post('/uni-eliminar/:id', (req, res)=> {
       let params = req.params;
       UniSchema.deleteOne({ 'idIcfes': params.id}, {
         $set: req.body
@@ -116,11 +116,12 @@ router.post('/uni', (req, res) => {
             res.json({
                 resultado: false,
                 msg: 'No se pudieron eliminar los datos',
-                err
+                error
             });
         } else {
             res.json({
                 resultado: true,
+                msg: 'Se eliminaron los datos correctamente',
                 info: info
             })
         }
