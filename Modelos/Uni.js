@@ -18,4 +18,4 @@ let UniSchema = new mongoose.Schema({
     colegiogrado: String,
 });
 
-module.exports = mongoose.model('icfes', UniSchema, 'Pruebas');
+module.exports = mongoose.model('uni', UniSchema, 'Registro admisiones');

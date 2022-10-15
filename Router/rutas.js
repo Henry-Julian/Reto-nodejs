@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const UniSchema = require('../modelos/Uni.js');
+const UniSchema = require('../Modelos/Uni.js');
 
 router.get('/', function(req, res){
     res.send('Hola desde Express');
@@ -27,7 +27,7 @@ router.post('/uni', (req, res) => {
     });
     
     //Se le dice a mongo que nos cambie la información enviada
-        nuevoUni.save( function( err, datos ){
+        nuevoUni.save( function( err, Registroadmisiones ){
         if ( err ){
             console.log(err);
         }
@@ -38,10 +38,10 @@ router.post('/uni', (req, res) => {
 
      //Proceso para listar
      router.get('/unilistar', (req, res) => {
-     UniSchema.find((err, datos) => {
+     UniSchema.find((err, Registroadmisiones) => {
         if ( err )
         console.log('Error al leer los datos', err);
-        res.send(datos);
+        res.send(Registroadmisiones);
     })
 });
 
